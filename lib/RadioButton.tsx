@@ -18,11 +18,13 @@ export default function RadioButton({
   layout = 'row',
   onPress,
   selected = false,
-  size = 21,
+  size = 20,
+  innerCircleSize = 12,
   testID,
 }: RadioButtonProps) {
+  const innerSize  = innerCircleSize || size * 0.5;
   const borderWidth = PixelRatio.roundToNearestPixel(borderSize);
-  const InnerCircleSize = PixelRatio.roundToNearestPixel(size * 0.85);
+  const InnerCircleSize = PixelRatio.roundToNearestPixel(innerSize);
   const sizeFull = PixelRatio.roundToNearestPixel(size);
 
   let orientation: any = { flexDirection: 'row' };
