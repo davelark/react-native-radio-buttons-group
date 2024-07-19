@@ -22,7 +22,7 @@ export default function RadioButton({
   testID,
 }: RadioButtonProps) {
   const borderWidth = PixelRatio.roundToNearestPixel(borderSize);
-  const InnerCircleSize = PixelRatio.roundToNearestPixel(size * 0.75);
+  const InnerCircleSize = PixelRatio.roundToNearestPixel(size * 0.85);
   const sizeFull = PixelRatio.roundToNearestPixel(size);
 
   let orientation: any = { flexDirection: 'row' };
