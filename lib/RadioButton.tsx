@@ -87,7 +87,7 @@ export default function RadioButton({
                 backgroundColor: color,
                 width: innerCircleSize,
                 height: innerCircleSize,
-                borderRadius: 50%,
+                borderRadius: '50%',
               }}
             />
           )}
