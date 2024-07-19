@@ -22,9 +22,8 @@ export default function RadioButton({
   innerCircleSize = 12,
   testID,
 }: RadioButtonProps) {
-  const innerSize  = innerCircleSize || size * 0.5;
   const borderWidth = PixelRatio.roundToNearestPixel(borderSize);
-  const InnerCircleSize = PixelRatio.roundToNearestPixel(innerSize);
+  const innerCircleSize = PixelRatio.roundToNearestPixel(innerCircleSize);
   const sizeFull = PixelRatio.roundToNearestPixel(size);
 
   let orientation: any = { flexDirection: 'row' };
@@ -77,7 +76,7 @@ export default function RadioButton({
               borderWidth,
               width: sizeFull,
               height: sizeFull,
-              borderRadius: InnerCircleSize,
+              borderRadius: innerCircleSize,
             },
           ]}
         >
@@ -85,9 +84,9 @@ export default function RadioButton({
             <View
               style={{
                 backgroundColor: color,
-                width: InnerCircleSize,
-                height: InnerCircleSize,
-                borderRadius: InnerCircleSize,
+                width: innerCircleSize,
+                height: innerCircleSize,
+                borderRadius: 50%,
               }}
             />
           )}
