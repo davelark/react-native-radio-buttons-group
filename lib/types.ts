@@ -20,6 +20,7 @@ export type RadioButtonProps = {
   size?: number;
   testID?: string;
   value?: string;
+  innerCircleSize?: number;
 };
 
 export type RadioGroupProps = {
