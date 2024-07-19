@@ -6,6 +6,7 @@ import { RadioButtonProps } from './types';
 export default function RadioButton({
   accessibilityLabel,
   borderColor,
+  selectedBorderColor,
   borderSize = 2,
   color = '#444',
   containerStyle,
@@ -72,7 +73,7 @@ export default function RadioButton({
           style={[
             styles.border,
             {
-              borderColor: borderColor || color,
+              borderColor: (selected && selectedBorderColor) || borderColor || color,
               borderWidth,
               width: sizeFull,
               height: sizeFull,
