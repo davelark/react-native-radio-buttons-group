@@ -4,6 +4,7 @@ import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 export type RadioButtonProps = {
   accessibilityLabel?: string;
   borderColor?: string;
+  selectedBorderColor?: string;
   borderSize?: number;
   color?: string;
   containerStyle?: StyleProp<ViewStyle>;
@@ -32,4 +33,7 @@ export type RadioGroupProps = {
   radioButtons: RadioButtonProps[];
   selectedId?: string;
   testID?: string;
+  color?: string;
+  borderColor?: string;
+  selectedBorderColor?: string;
 };
