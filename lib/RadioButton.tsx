@@ -1,7 +1,7 @@
 import React from 'react';
 import { PixelRatio, Pressable, StyleSheet, Text, View } from 'react-native';
 
-import { RadioButtonProps } from './types';
+import type { RadioButtonProps } from './types';
 
 export default function RadioButton({
   accessibilityLabel,
@@ -22,7 +22,7 @@ export default function RadioButton({
   testID,
 }: RadioButtonProps) {
   const borderWidth = PixelRatio.roundToNearestPixel(borderSize);
-  const InnerCircleSize = PixelRatio.roundToNearestPixel(size * 0.75);
+  const InnerCircleSize = PixelRatio.roundToNearestPixel(size * 0.75) as number;
   const sizeFull = PixelRatio.roundToNearestPixel(size);
 
   let orientation: any = { flexDirection: 'row' };

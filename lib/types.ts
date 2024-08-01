@@ -1,5 +1,5 @@
-import {ReactNode} from 'react';
-import { StyleProp, TextStyle, ViewStyle } from 'react-native';
+import type {ReactNode} from 'react';
+import type { StyleProp, TextStyle, ViewStyle } from 'react-native';
 
 export type RadioButtonProps = {
   accessibilityLabel?: string;

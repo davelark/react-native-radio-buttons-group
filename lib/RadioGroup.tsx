@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import RadioButton from './RadioButton';
-import { RadioGroupProps } from './types';
+import type { RadioGroupProps } from './types';
 
 export default function RadioGroup({
   accessibilityLabel,
