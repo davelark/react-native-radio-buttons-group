@@ -8,6 +8,9 @@ export default function RadioGroup({
   accessibilityLabel,
   containerStyle,
   labelStyle,
+  color,
+  borderColor,
+  selectedBorderColor,
   layout = 'column',
   onPress,
   radioButtons,
@@ -36,6 +39,7 @@ export default function RadioGroup({
     >
       {radioButtons.map((button) => (
         <RadioButton
+          {...{color, borderColor, selectedBorderColor}}
           {...button}
           key={button.id}
           labelStyle={button.labelStyle || labelStyle}

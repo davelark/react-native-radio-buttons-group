@@ -6,6 +6,7 @@ import type { RadioButtonProps } from './types';
 export default function RadioButton({
   accessibilityLabel,
   borderColor,
+  selectedBorderColor,
   borderSize = 2,
   color = '#444',
   containerStyle,
@@ -19,10 +20,12 @@ export default function RadioButton({
   onPress,
   selected = false,
   size = 20,
+  innerCircleSize = 12,
   testID,
 }: RadioButtonProps) {
+  innerCircleSize = PixelRatio.roundToNearestPixel(innerCircleSize);
   const borderWidth = PixelRatio.roundToNearestPixel(borderSize);
-  const InnerCircleSize = PixelRatio.roundToNearestPixel(size * 0.75) as number;
+
   const sizeFull = PixelRatio.roundToNearestPixel(size);
 
   let orientation: any = { flexDirection: 'row' };
@@ -71,11 +74,11 @@ export default function RadioButton({
           style={[
             styles.border,
             {
-              borderColor: borderColor || color,
+              borderColor: (selected && selectedBorderColor) || borderColor || color,
               borderWidth,
               width: sizeFull,
               height: sizeFull,
-              borderRadius: InnerCircleSize,
+              borderRadius: size,
             },
           ]}
         >
@@ -83,9 +86,9 @@ export default function RadioButton({
             <View
               style={{
                 backgroundColor: color,
-                width: InnerCircleSize,
-                height: InnerCircleSize,
-                borderRadius: InnerCircleSize,
+                width: innerCircleSize,
+                height: innerCircleSize,
+                borderRadius: size,
               }}
             />
           )}
